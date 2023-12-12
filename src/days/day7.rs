@@ -12,22 +12,29 @@ fn rank_v2(a: &Vec<u32>) -> u32 {
     });
     let num_j: u32 = *f.get(&0).unwrap_or(&0);
     let mut max_val = 0;
-    let mut max_key =0;
-    for (k,v) in &f{
-        if *k==0{continue;}
-        max_val =std::cmp::max(max_val,*v);
+    let mut max_key = 0;
+    for (k, v) in &f {
+        if *k == 0 {
+            continue;
+        }
+        max_val = std::cmp::max(max_val, *v);
     }
-    for (k,v) in &f{
-        if *k==0{continue;}
-        if *v== max_val {max_key=*k;} 
+    for (k, v) in &f {
+        if *k == 0 {
+            continue;
+        }
+        if *v == max_val {
+            max_key = *k;
+        }
     }
     let mut b = a.clone();
     b.retain(|v| *v != 0);
     for _ in 0..num_j {
         b.push(max_key);
     }
-    if num_j >=1 {
-    dbg!(&a,&b);}
+    if num_j >= 1 {
+        dbg!(&a, &b);
+    }
     return rank(&b);
 }
 fn rank(a: &Vec<u32>) -> u32 {

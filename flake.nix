@@ -32,7 +32,9 @@
           packages = with pkgs; [
             pre-commit
             vscode-extensions.llvm-org.lldb-vscode
+            pkgs.rust-analyzer
           ];
+
         };
         packages = {
           aoc =

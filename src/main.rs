@@ -1,6 +1,5 @@
 mod days;
-use days::day9
-;
+use days::day10;
 fn main() {
-    day9::solve(true);
+    day10::solve(true);
 }

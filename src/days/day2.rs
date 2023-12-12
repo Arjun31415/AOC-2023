@@ -64,7 +64,7 @@ fn part2() {
         color_count.insert('r', 0);
         // println!("{:#?}", line);
         let colon_pos = line.find(":").unwrap();
-        let id: u32 = line[..colon_pos].to_string().parse().unwrap();
+        let _id: u32 = line[..colon_pos].to_string().parse().unwrap();
         line = &line[colon_pos + 1..];
         let mut semi_colon_pos: Vec<_> = line.match_indices(";").map(|(i, _)| i).collect();
         semi_colon_pos.push(line.len());

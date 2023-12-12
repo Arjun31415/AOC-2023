@@ -113,8 +113,8 @@ fn part2() {
             if ch != '*' {
                 continue;
             }
-            let mut gear_ratio:u64 = 1;
-            let mut adjs:HashSet<(usize,usize)> = HashSet::new();
+            let mut gear_ratio: u64 = 1;
+            let mut adjs: HashSet<(usize, usize)> = HashSet::new();
             for k in 0..di.len() {
                 let idx_i = i as i32 + di[k];
                 let idx_j = j as i32 + dj[k];
@@ -139,10 +139,10 @@ fn part2() {
             }
             // dbg!((i,j,&adjs,gear_ratio));
             if adjs.len() == 2 {
-                for g in adjs{
-                    gear_ratio *=f[&g] as u64;
+                for g in adjs {
+                    gear_ratio *= f[&g] as u64;
                 }
-                s+=gear_ratio;
+                s += gear_ratio;
             }
         }
     }

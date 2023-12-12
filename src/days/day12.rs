@@ -73,3 +73,4 @@ pub fn solve(x: bool) {
         generic_solve(2);
     }
 }
+

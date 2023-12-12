@@ -21,7 +21,7 @@ fn part1() {
         let (mut x1, mut x2) = solve_quad(1, -(t as i64), d as i64);
         x1 = x1.max(0);
         x2 = x2.min(t as i64);
-        let s = (x2 - x1 + 1);
+        let s = x2 - x1 + 1;
         dbg!(x1, x2, s);
         ans *= s;
     }
@@ -33,7 +33,7 @@ fn solve_quad(a: i64, b: i64, c: i64) -> (i64, i64) {
     return ((x1 + 0.1).ceil() as i64, (x2 - 0.1).floor() as i64);
 }
 fn part2() {
-    let mut ans = 1;
+    let _ans = 1;
     let input = handle_input();
     let w = input
         .lines()
@@ -51,7 +51,7 @@ fn part2() {
     let (mut x1, mut x2) = solve_quad(1, -(t as i64), d as i64);
     x1 = x1.max(0);
     x2 = x2.min(t as i64);
-    let s = (x2 - x1 + 1);
+    let s = x2 - x1 + 1;
     dbg!(t, d, x1, x2, s);
 
     // for i in 0..w[0].len() {

@@ -1,6 +1,6 @@
 use rayon::prelude::*;
 use std::{
-    collections::{HashMap, HashSet},
+    collections::HashMap,
     sync::{Arc, Mutex},
 };
 fn handle_input() -> String {

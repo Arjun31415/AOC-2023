@@ -73,8 +73,8 @@ fn part2() {
         .filter(|w| w.ends_with('Z'))
         .map(|w| w.to_owned())
         .collect();
-    let mut i:usize;
-    let mut ans:u32;
+    let mut i: usize;
+    let mut ans: u32;
     dbg!(cur.len(), dest.len());
     let mut f: HashMap<String, HashMap<String, Vec<u32>>> = HashMap::new();
     for c in &cur {
@@ -107,10 +107,10 @@ fn part2() {
     let mut ans: u64 = 1;
     for (_, l1) in f {
         for (_, x) in l1 {
-                ans = ans.lcm(&(x[0] as u64));
+            ans = ans.lcm(&(x[0] as u64));
         }
     }
-    println!("{}",ans);
+    println!("{}", ans);
 }
 
 pub fn solve(x: bool) {
